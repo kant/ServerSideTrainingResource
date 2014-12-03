@@ -3,18 +3,18 @@ ServerSideTrainingResource
 
 Server
 ---
-* JBoss
-* Vert.X
+* [JBoss](http://www.jboss.org/)
+* [Vert.X](http://vertx.io/)
 
 Computing
 ---
-*Spaek
+* [Spark](https://spark.apache.org/)
 
 BigData
 ----
-* Cassandra
+* [Cassandra](http://cassandra.apache.org/)
 
 Load Testing
 ----
-* Gatling
-* JMeter
+* [Gatling](http://gatling.io/)
+* [JMeter](http://jmeter.apache.org/)
