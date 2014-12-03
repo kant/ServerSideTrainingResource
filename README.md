@@ -4,7 +4,7 @@ ServerSideTrainingResource
 Server
 ---
 * [JBoss](http://www.jboss.org/)
-  * [JBoss training step]
+  * [JBoss training step](https://github.com/pompomgood/ServerSideTrainingResource/blob/master/jboss/jboss.md)
 * [Vert.X](http://vertx.io/)
 
 Computing
