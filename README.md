@@ -14,6 +14,7 @@ Computing
 BigData
 ----
 * [Cassandra](http://cassandra.apache.org/)
+  * [Cassandra Java driver example](https://github.com/pompomgood/CassandraDataxstaxDriverExample)
 
 Load Testing
 ----
