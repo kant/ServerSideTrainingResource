@@ -2,14 +2,19 @@ ServerSideTrainingResource
 ==========================
 
 Server
--
-*JBoss
+---
+* JBoss
+* Vert.X
+
+Computing
+---
+*Spaek
 
 BigData
--
-*Cassandra
+----
+* Cassandra
 
 Load Testing
--
-*Gatling
-*JMeter
+----
+* Gatling
+* JMeter
