@@ -10,6 +10,7 @@ Server
 Computing
 ---
 * [Spark](https://spark.apache.org/)
+  * [Spark-Cassandra example](https://github.com/pompomgood/SparkCassandraSample)
 
 BigData
 ----
