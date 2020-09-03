@@ -49,8 +49,20 @@ Cassandra introduces some nomenclature to handle these concepts:
 - Host ID: A unique identifier for a single “physical” node, usually present at one Endpoint and containing one or more Tokens.
 - Virtual Node (or vnode): A Token on the hash ring owned by the same physical node, one with the same Host ID.
 
-#Removing aNode
-1. Node status
-  `notetool status`
-2. Decommission a Node
-  `nodetool -h 192.168.1.85 -p 7199 decommission`
+### Multi-master Replication: Versioned Data and Tunable Consistency
+
+Replication Strategy:
+- NetworkTopologyStrategy
+- SimpleStrategy
+
+Tunable Consistency:
+- ONE, TWO, THREE, QUORUM, ALL
+- LOCAL_QUORUM
+- EACH_QUORUM
+- LOCAL_ONE
+- ANY
+
+https://cassandra.apache.org/doc/latest/architecture/dynamo.html#picking-consistency-levels
+W + R > RF, If QUORUM is used for both writes and reads, at least one of the replicas is guaranteed to participate in both the write and the read request, which in turn guarantees that the quorums will overlap and the write will be visible to the read.
+
+
