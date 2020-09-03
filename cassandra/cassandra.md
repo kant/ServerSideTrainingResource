@@ -65,4 +65,20 @@ Tunable Consistency:
 https://cassandra.apache.org/doc/latest/architecture/dynamo.html#picking-consistency-levels
 W + R > RF, If QUORUM is used for both writes and reads, at least one of the replicas is guaranteed to participate in both the write and the read request, which in turn guarantees that the quorums will overlap and the write will be visible to the read.
 
+### Distributed Cluster Membership and Failure Detection
+
+Gossip
+1. Updates the local node’s heartbeat state (the version) and constructs the node’s local view of the cluster gossip endpoint state.
+2. Picks a random other node in the cluster to exchange gossip endpoint state with.
+3. Probabilistically attempts to gossip with any unreachable nodes (if one exists)
+4. Gossips with a seed node if that didn’t happen in step 2.
+
+Ring Membership and Failure Detection
+Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in which every node is constantly making an independent decision of if their peer nodes are available or not. This decision is primarily based on received heartbeat state.
+
+## Storage Engine
+
+- CommitLog
+- Memtables
+- SSTables https://cassandra.apache.org/doc/latest/architecture/storage_engine.html#sstables
 
