@@ -1,5 +1,10 @@
-Cassandra Tip
-==========================
+# Cassandra
+
+## Overview
+
+- partitioned wide column storage model
+- eventually consistent
+- scalable, reliable and highly available
 
 #Removing aNode
 1. Node status
