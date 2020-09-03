@@ -82,3 +82,13 @@ Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in w
 - Memtables
 - SSTables https://cassandra.apache.org/doc/latest/architecture/storage_engine.html#sstables
 
+## Guarantees
+
+- High Scalability
+- High Availability
+- Durability
+- Eventual Consistency of writes to a single table
+- Lightweight transactions with linearizable consistency
+- Batched writes across multiple tables are guaranteed to succeed completely or not at all
+- Secondary indexes are guaranteed to be consistent with their local replicas data
+
