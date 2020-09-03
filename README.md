@@ -1,23 +1,22 @@
-ServerSideTrainingResource
-==========================
+# ServerSideTrainingResource
 
-Server
----
-* [JBoss](http://www.jboss.org/)
-  * [JBoss training step](https://github.com/pompomgood/ServerSideTrainingResource/blob/master/jboss/jboss.md)
-* [Vert.X](http://vertx.io/)
+## Java
+- [JBoss](http://www.jboss.org/)
+  - [JBoss training step](https://github.com/pompomgood/ServerSideTrainingResource/blob/master/jboss/jboss.md)
+- [Vert.X](http://vertx.io/)
 
-Computing
----
-* [Spark](https://spark.apache.org/)
-  * [Spark-Cassandra example](https://github.com/pompomgood/SparkCassandraSample)
+## Computing
 
-BigData
-----
-* [Cassandra](http://cassandra.apache.org/)
-  * [Cassandra Java driver example](https://github.com/pompomgood/CassandraDataxstaxDriverExample)
+- [Spark](https://spark.apache.org/)
+- [Spark-Cassandra example](https://github.com/pompomgood/SparkCassandraSample)
 
-Load Testing
-----
-* [Gatling](http://gatling.io/)
-* [JMeter](http://jmeter.apache.org/)
+## NoSQL
+
+### Cassandra
+
+- Design: https://cassandra.apache.org/doc/latest/architecture/overview.html
+
+## Load Testing
+
+- [Gatling](http://gatling.io/)
+- [JMeter](http://jmeter.apache.org/)
