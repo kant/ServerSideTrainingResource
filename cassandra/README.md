@@ -92,6 +92,13 @@ Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in w
 - Batched writes across multiple tables are guaranteed to succeed completely or not at all
 - Secondary indexes are guaranteed to be consistent with their local replicas data
 
+## Tombstones
+
+https://cassandra.apache.org/doc/latest/operating/compaction/index.html#tombstones-and-garbage-collection-gc-grace
+
+- This approach is used instead of removing values because of the distributed nature of Cassandra.
+- The table level `gc_grace_seconds` parameter controls how long Cassandra will retain tombstones through compaction events before finally removing them.
+
 ## User case
 
 - chat room
