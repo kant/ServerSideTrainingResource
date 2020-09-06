@@ -92,3 +92,8 @@ Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in w
 - Batched writes across multiple tables are guaranteed to succeed completely or not at all
 - Secondary indexes are guaranteed to be consistent with their local replicas data
 
+## User case
+
+- chat room
+- you may alos like
+
