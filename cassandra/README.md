@@ -92,6 +92,11 @@ Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in w
 - Batched writes across multiple tables are guaranteed to succeed completely or not at all
 - Secondary indexes are guaranteed to be consistent with their local replicas data
 
+## Evaluating and Refining Data Models
+
+- `N_v = N_r (N_c - N_{pk} - N_s) + N_s`
+
+
 ## Tombstones
 
 https://cassandra.apache.org/doc/latest/operating/compaction/index.html#tombstones-and-garbage-collection-gc-grace
@@ -104,3 +109,10 @@ https://cassandra.apache.org/doc/latest/operating/compaction/index.html#tombston
 - chat room
 - you may alos like
 
+## Interview questions
+
+Q: What is Cassandra?
+A: Apache Cassandra is an open source, distributed, NoSQL database. It presents a partitioned wide column storage model with eventually consistent semantics.
+
+Q: How to do data modling?
+A: First, we can do `Conceptual Data Modeling`. We create a simple domain model. Second, define the application queries. And then, do `logical data modling`. Logical model containing a table for each query, capturing entities and relationships from the conceptual model. Final, do `Physical Data Modeling`. walk through each of the logical model tables, assigning types to each item. Then we analyze the model by performing size calculations and testing out how the model works.
