@@ -132,3 +132,6 @@ CREATE TABLE [ IF NOT EXISTS ] [keyspace_name.]table_name
   [ [ AND ] CLUSTERING ORDER BY [ clustering_column_name order ] ]
   [ [ AND ] ID = 'table_hash_tag' ] ] ;
 ```
+
+Q: How Cassandra distribute data?
+A: Cassandra use consistent hashing to map every node to one or more tokens on a continuous hash ring. But with evenly spaced tokens and a small number of physical nodes, incremental scaling is difficult because there are no token selections for new nodes that can leave the ring balanced. Cassandra use virtual nodes to solve imbalance problem
