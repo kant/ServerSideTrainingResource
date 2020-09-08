@@ -1,6 +1,11 @@
 # ServerSideTrainingResource
 
+## Go
+
+- Network: http://tumregels.github.io/Network-Programming-with-Go/
+
 ## Java
+
 - Spring https://spring.io/projects/spring-framework
 - [JBoss](http://www.jboss.org/)
   - [JBoss training step](https://github.com/pompomgood/ServerSideTrainingResource/blob/master/jboss/jboss.md)
