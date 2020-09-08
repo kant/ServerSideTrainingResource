@@ -1,5 +1,20 @@
 # ServerSideTrainingResource
 
+## Micro Service
+
+### Metrics
+
+- grafana
+- prometheus
+
+### Error
+
+- Sentry
+
+### Service
+
+- Consul
+
 ## Go
 
 - Network: http://tumregels.github.io/Network-Programming-with-Go/
