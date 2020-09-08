@@ -116,3 +116,19 @@ A: Apache Cassandra is an open source, distributed, NoSQL database. It presents 
 
 Q: How to do data modling?
 A: First, we can do `Conceptual Data Modeling`. We create a simple domain model. Second, define the application queries. And then, do `logical data modling`. Logical model containing a table for each query, capturing entities and relationships from the conceptual model. Final, do `Physical Data Modeling`. walk through each of the logical model tables, assigning types to each item. Then we analyze the model by performing size calculations and testing out how the model works.
+
+Q: How Cassandra organize data?
+A: Cassandra has 6 scope of data. From top to bottom, there are cluster, keyspace, table, partition, row and colunm. Keyspace defines how a dataset is replicated. Rows contains a collection of columns identified by a unique primary key.
+
+```cql
+CREATE KEYSPACE [ IF NOT EXISTS ] keyspace_name 
+  WITH REPLICATION = { replication_map }
+  [ AND DURABLE_WRITES = ( true | false ) ] ;
+
+
+CREATE TABLE [ IF NOT EXISTS ] [keyspace_name.]table_name
+  ( column_definition [ , ... ] | PRIMARY KEY (column_list) )
+  [ WITH [ table_options ]
+  [ [ AND ] CLUSTERING ORDER BY [ clustering_column_name order ] ]
+  [ [ AND ] ID = 'table_hash_tag' ] ] ;
+```
