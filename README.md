@@ -34,6 +34,7 @@
 ### Cassandra
 
 - Design: https://cassandra.apache.org/doc/latest/architecture/overview.html
+- How Cassandra Stores Data on Filesystem: https://saumitra.me/blog/how-cassandra-stores-data-on-filesystem/
 
 ## Load Testing
 
