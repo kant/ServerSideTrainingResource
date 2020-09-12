@@ -16,6 +16,7 @@
 ## Features
 
 CQL CQL allows users to organize data within a cluster of Cassandra nodes using:
+
 - Keyspace: defines how a dataset is replicated.
 - Table: defines the typed schema for a collection of partitions.
 - Partition: defines the mandatory part of the primary key all rows in Cassandra must have.
@@ -23,6 +24,7 @@ CQL CQL allows users to organize data within a cluster of Cassandra nodes using:
 - Column: A single datum with a type which belong to a row.
 
 Cassandra does not support:
+
 - Cross partition transactions
 - Distributed joins
 - Foreign keys or referential integrity.
@@ -40,10 +42,11 @@ https://cassandra.apache.org/doc/latest/architecture/dynamo.html#dynamo
 
 ### Dataset Partitioning: Consistent Hashing
 
-- Token Ring https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf
+- Token Ring <https://pdos.csail.mit.edu/papers/chord:sigcomm01/chord_sigcomm.pdf>
 - Multiple Tokens per Physical Node (a.k.a. vnodes)
 
 Cassandra introduces some nomenclature to handle these concepts:
+
 - Token: A single position on the dynamo style hash ring.
 - Endpoint: A single physical IP and port on the network.
 - Host ID: A unique identifier for a single “physical” node, usually present at one Endpoint and containing one or more Tokens.
@@ -52,10 +55,12 @@ Cassandra introduces some nomenclature to handle these concepts:
 ### Multi-master Replication: Versioned Data and Tunable Consistency
 
 Replication Strategy:
+
 - NetworkTopologyStrategy
 - SimpleStrategy
 
 Tunable Consistency:
+
 - ONE, TWO, THREE, QUORUM, ALL
 - LOCAL_QUORUM
 - EACH_QUORUM
@@ -68,6 +73,7 @@ W + R > RF, If QUORUM is used for both writes and reads, at least one of the rep
 ### Distributed Cluster Membership and Failure Detection
 
 Gossip
+
 1. Updates the local node’s heartbeat state (the version) and constructs the node’s local view of the cluster gossip endpoint state.
 2. Picks a random other node in the cluster to exchange gossip endpoint state with.
 3. Probabilistically attempts to gossip with any unreachable nodes (if one exists)
@@ -96,7 +102,6 @@ Every node in Cassandra runs a variant of the Phi Accrual Failure Detector, in w
 
 - `N_v = N_r (N_c - N_{pk} - N_s) + N_s`
 
-
 ## Tombstones
 
 https://cassandra.apache.org/doc/latest/operating/compaction/index.html#tombstones-and-garbage-collection-gc-grace
@@ -121,7 +126,7 @@ Q: How Cassandra organize data?
 A: Cassandra has 6 scope of data. From top to bottom, there are cluster, keyspace, table, partition, row and colunm. Keyspace defines how a dataset is replicated. Rows contains a collection of columns identified by a unique primary key.
 
 ```cql
-CREATE KEYSPACE [ IF NOT EXISTS ] keyspace_name 
+CREATE KEYSPACE [ IF NOT EXISTS ] keyspace_name
   WITH REPLICATION = { replication_map }
   [ AND DURABLE_WRITES = ( true | false ) ] ;
 
