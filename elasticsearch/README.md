@@ -60,9 +60,18 @@ flow:
 
 ## Search Data
 
+### relevance
+
+- Term Frequency
+- Inverse Document Frequency
+- Field Length Normalization
+
 ### Search API
 
 `_search`
+
+- match
+- term
 
 ### Aggregate
 
