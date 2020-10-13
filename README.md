@@ -4,21 +4,26 @@
 
 ### Metrics
 
-- grafana
-- prometheus
+- Grafana <https://grafana.com/>
+- prometheus <https://prometheus.io/>
 
 ### Error
 
-- Sentry
+- Sentry <https://sentry.io/>
 
 ### Service
 
-- Consul
+- Consul <https://www.consul.io/>
+- Isito <https://istio.io/latest/>
 
 ### Proxy
 
-- envoy
+- envoy <https://www.envoyproxy.io/>
 - HAProxy
+
+### Trace
+
+- jaeger <https://www.jaegertracing.io/>
 
 ## Go
 
