@@ -14,7 +14,7 @@
 ### Service
 
 - Consul <https://www.consul.io/>
-- Isito <https://istio.io/latest/>
+- Istio <https://istio.io/latest/>
 
 ### Proxy
 
